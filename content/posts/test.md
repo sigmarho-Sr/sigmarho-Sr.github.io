@@ -10,7 +10,7 @@ title = 'test'
 
 ## 数式のテスト
 量子状態\(\rho^{AB}\)に対して, **エンタングルメント・エントロピー**（*entanglement entropy*）は以下で定義される. 
-$$S(A)_{\rho}=-\mathrm{Tr}[\rho^{AB}\log\rho^{AB}]$$
+$$S(A)_{\rho}=-\mathrm{Tr}[\rho^{A}\log\rho^{A}]$$
 
 ## calloutのテスト
 エンタングルメント・エントロピーの操作的意味として, 以下の定理が知られている.
