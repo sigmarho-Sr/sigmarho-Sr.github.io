@@ -7,16 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© 2026 sigmarho</copyright>
-    <lastBuildDate>Wed, 04 Feb 2026 15:51:50 +0900</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Feb 2026 17:00:31 +0900</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>test</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Wed, 04 Feb 2026 15:51:50 +0900</pubDate>
+      <title>スワップ・トリックの証明</title>
+      <link>http://localhost:1313/posts/swap-trick/</link>
+      <pubDate>Thu, 05 Feb 2026 17:00:31 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/test/</guid>
+      <guid>http://localhost:1313/posts/swap-trick/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/swap-trick/featured.jpg" />
     </item>
     
   </channel>

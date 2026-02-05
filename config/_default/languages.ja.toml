@@ -8,7 +8,7 @@ title = "sigmarho"
   displayName = "JA"
   isoCode = "ja"
   rtl = false
-  dateFormat = "2006-01-02 15:04:05"
+  dateFormat = "2006-01-02"
   logo = "img/sigmarho_logo_white.png"
   description = "sigmarho's website"
 

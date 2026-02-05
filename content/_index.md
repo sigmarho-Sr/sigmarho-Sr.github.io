@@ -4,6 +4,7 @@
     "age": 23,
     "status": "graduate student",
     "major": "quantum information theory",
+    "institution": "UTokyo",
     "favorite color": "#7ea596",
     "location": {
         "country": "Japan",
