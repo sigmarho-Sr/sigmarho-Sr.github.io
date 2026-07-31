@@ -1,6 +1,6 @@
 +++
 date = '2026-07-29T23:40:58+09:00'
-draft = true
+draft = false
 title = 'CHSHゲーム'
 +++
 {{< katex >}}
