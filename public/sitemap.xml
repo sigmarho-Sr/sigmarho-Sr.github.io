@@ -4,19 +4,31 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-27T13:49:04+09:00</lastmod>
+    <lastmod>2026-07-29T23:40:58+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-02-27T13:49:04+09:00</lastmod>
+    <lastmod>2026-07-29T23:40:58+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/chsh-game/</loc>
+    <lastmod>2026-07-29T23:40:58+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/swap-trick/</loc>
     <lastmod>2026-02-05T17:00:31+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/test/</loc>
+    <lastmod>2026-02-04T15:51:50+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

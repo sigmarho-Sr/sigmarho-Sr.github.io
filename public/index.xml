@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© 2026 sigmarho</copyright>
-    <lastBuildDate>Thu, 05 Mar 2026 12:59:59 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jul 2026 23:40:58 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CHSHゲーム</title>
+      <link>http://localhost:1313/posts/chsh-game/</link>
+      <pubDate>Wed, 29 Jul 2026 23:40:58 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/chsh-game/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/chsh-game/featured.jpg" />
+    </item>
     
     <item>
       <title>僕が弾いてミクちゃんがうたう &#34;Norwegian Wood&#34;</title>
@@ -47,6 +57,16 @@
       <guid>http://localhost:1313/posts/swap-trick/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/swap-trick/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/posts/test/</link>
+      <pubDate>Wed, 04 Feb 2026 15:51:50 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/test/</guid>
+      <description></description>
+      
     </item>
     
   </channel>
