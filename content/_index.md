@@ -14,7 +14,7 @@
     "social media": {
         "misskey": "@semolina_pilchard@misskey.io",
         # named after "I Am The Walrus" 
-        "x-twitter": "@sigmarho_2",
+        "x-twitter": "@sigmarho_vrc",
         "youtube": "@しぐまろ"
     },
     "house": "Ravenclaw"
