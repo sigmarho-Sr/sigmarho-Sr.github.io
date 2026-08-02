@@ -190,5 +190,101 @@ $$
 $$
 がいえる. 勝つ確率と負ける確率の和が \(1\) であることから勝率は \(\dfrac{1+1/\sqrt{2}}{2}\) より大きくなることはできない.
 
+## Qiskit を用いたシミュレーション
+
+以下に Qiskit を用いて行ったシミュレーションとその結果を示す.
+
+### コード
+```Python
+import numpy as np
+from qiskit import QuantumCircuit
+from qiskit_aer import AerSimulator
+
+def simulate_classical_chsh(trials=10000):
+    """
+    古典的に最適なCHSHゲームのシミュレーション.
+    AliceとBobはx, yの値に関わらず0を出力する.
+    """
+    wins = 0
+    for _ in range(trials):
+        # 1. Refereeがランダムにx, yを選ぶ
+        x = np.random.randint(0, 2)
+        y = np.random.randint(0, 2)
+
+        # 2. AliceとBobは常に0を返す
+        a = 0
+        b = 0
+
+        # 3. 勝利条件の判定
+        if (x & y) == (a ^ b):
+            wins += 1
+        
+    win_rate = wins / trials
+    print(f"[古典的戦略] 試行回数: {trials}, 勝率: {win_rate:.4f} (理論上の限界: 0.75)")
+    return win_rate
+
+def simulate_quantum_chsh(trials=10000):
+    """
+    量子的に最適なCHSHゲームのシミュレーション.
+    AliceとBobはBell状態を共有し, x, yの値に応じて測定基底を変化させる.
+    """
+    sim = AerSimulator()
+
+    conbinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+    circuits = []
+
+    for (x, y) in conbinations:
+        # 2-qubit, 2-cbitの量子回路を作成
+        qc = QuantumCircuit(2, 2)
+
+        # 1. Bell状態の生成
+        qc.h(0)
+        qc.cx(0, 1)
+
+        # 2. Aliceの測定基底の設定
+        if x == 0:
+            pass # Z基底
+        elif x == 1:
+            qc.h(0) # X基底 (HゲートをかけてからZ測定)
+
+        # 3. Bobの測定基底の設定
+        if y == 0:
+            qc.ry(-np.pi/4, 1) # (X+Z)/√2基底: Ry(-π/4)で回転
+        elif y == 1:
+            qc.ry(np.pi/4, 1) # (X-Z)/√2基底: Ry(π/4)で回転
+
+        # 4. 測定
+        qc.measure([0, 1], [0, 1])
+        circuits.append(qc)
+    
+    # Refereeはランダムにx, yを選ぶので、各回路を均等に試行する
+    shots_per_circuit = trials // 4
+    results = sim.run(circuits, shots=shots_per_circuit).result()
+
+    wins = 0
+    for i, (x, y) in enumerate(conbinations):
+        counts = results.get_counts(i)
+
+        for outcome, count in counts.items():
+            a = int(outcome[1])  # Aliceの出力
+            b = int(outcome[0])  # Bobの出力
+
+            # 勝利条件の判定
+            if (x & y) == (a ^ b):
+                wins += count
+    
+    win_rate = wins / trials
+    print(f"[量子的戦略] 試行回数: {trials}, 勝率: {win_rate:.4f} (理論上の限界: 約0.8536)")
+    return win_rate
+
+simulate_classical_chsh(trials=10000)
+simulate_quantum_chsh(trials=10000)
+```
+### 結果
+```
+[古典的戦略] 試行回数: 10000, 勝率: 0.7460 (理論上の限界: 0.75)
+[量子的戦略] 試行回数: 10000, 勝率: 0.8567 (理論上の限界: 約0.8536)
+```
+
 ## 参考文献
 - Wilde, Mark M. From classical to quantum Shannon theory. _arXiv preprint arXiv:1106.1445_, 2011.

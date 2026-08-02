@@ -8,8 +8,7 @@
     "favorite color": "#7ea596",
     "location": {
         "country": "Japan",
-        "prefecture": "Kanagawa",
-        "city": "Kawasaki"
+        "prefecture": "Kanagawa"
     },
     "social media": {
         "misskey": "@semolina_pilchard@misskey.io",
